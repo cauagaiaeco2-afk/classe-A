@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Intro, WhatsFloat, ManausMap } from "@/components/Extras";
-import sala from "@/assets/sala.png.asset.json";
-import cozinha1 from "@/assets/cozinha1.png.asset.json";
-import cozinha2 from "@/assets/cozinha2.png.asset.json";
-import recepcao from "@/assets/recepcao.png.asset.json";
+import sala from "@/assets/sala.png";
+import cozinha1 from "@/assets/cozinha1.png";
+import cozinha2 from "@/assets/cozinha2.png";
+import recepcao from "@/assets/recepcao.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -95,7 +95,7 @@ function Index() {
 
       {/* HERO */}
       <section className="relative flex min-h-screen items-center justify-center">
-        <img src={sala.url} alt="Sala de TV com painel iluminado" className="absolute inset-0 h-full w-full object-cover opacity-40" />
+        <img src={sala} alt="Sala de TV com painel iluminado" className="absolute inset-0 h-full w-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
         <div className="relative z-10 px-6 text-center fade-up">
           <Logo className="mb-8 md:mb-10 md:scale-125" />
@@ -136,7 +136,7 @@ function Index() {
 
       {/* VERSE */}
       <section className="relative py-20 md:py-32 text-center">
-        <img src={recepcao.url} alt="Recepção com iluminação linear" className="absolute inset-0 h-full w-full object-cover opacity-25" />
+        <img src={recepcao} alt="Recepção com iluminação linear" className="absolute inset-0 h-full w-full object-cover opacity-25" />
         <div className="absolute inset-0 bg-background/60" />
         <blockquote className="relative mx-auto max-w-4xl px-6">
           <p className="font-display text-3xl leading-snug md:text-5xl">"Entrega o teu caminho ao Senhor, confia nele, e <span className="text-gold-gradient">o mais Ele fará."</span></p>
@@ -147,7 +147,7 @@ function Index() {
       {/* CUIDADOS */}
       <section id="cuidados" className="mx-auto grid max-w-7xl gap-16 px-6 py-20 md:py-28 lg:grid-cols-2">
         <div className="relative">
-          <img src={cozinha2.url} alt="Cozinha compacta preta com ripado de madeira" className="h-full max-h-[700px] w-full object-cover shadow-gold" />
+          <img src={cozinha2} alt="Cozinha compacta preta com ripado de madeira" className="h-full max-h-[700px] w-full object-cover shadow-gold" />
           <div className="absolute -bottom-6 -right-6 hidden border border-primary bg-background p-6 md:block">
             <p className="font-display text-4xl text-gold-gradient">100%</p>
             <p className="text-xs uppercase tracking-widest text-muted-foreground">sob medida</p>
@@ -177,10 +177,10 @@ function Index() {
           <h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">Sonhos que <span className="text-gold-gradient">ganharam forma</span></h2>
           <div className="mt-14 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
             {[
-              [sala.url, "Sala de TV com LED"],
-              [cozinha1.url, "Cozinha Taupe"],
-              [cozinha2.url, "Cozinha Black & Wood"],
-              [recepcao.url, "Recepção Minimalista"],
+              [sala, "Sala de TV com LED"],
+              [cozinha1, "Cozinha Taupe"],
+              [cozinha2, "Cozinha Black & Wood"],
+              [recepcao, "Recepção Minimalista"],
             ].map(([src, t], i) => (
               <figure key={t} className={`group relative overflow-hidden ${i % 2 ? "md:mt-16" : ""}`}>
                 <img src={src} alt={t} loading="lazy" className="h-[340px] md:h-[480px] w-full object-cover transition duration-700 group-hover:scale-110" />
